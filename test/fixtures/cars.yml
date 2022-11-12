@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  registration: MyString
+  name: MyString
+  phone: MyString
+  is_leave: false
+  student_id: 1
+
+two:
+  registration: MyString
+  name: MyString
+  phone: MyString
+  is_leave: false
+  student_id: 1
