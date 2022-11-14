@@ -30,6 +30,13 @@ class CarsController < ApplicationController
   def destroy
   end
 
+  def search
+    keyword = params[:keyword]
+    results_registration = Car.where("registration ILIKE ?", "%#{keyword}%")
+
+    render json: results_registration
+  end
+
 
   private
 

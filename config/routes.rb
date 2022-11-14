@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   resources :students, :cars
 
+  # for search
+  get '/search/:keyword' => 'cars#search'
+
 
 
 end
