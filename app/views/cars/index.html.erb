@@ -1,0 +1,17 @@
+<h1>All Cars</h1>
+
+<% @cars.each do |item| %>
+    <div>
+        Registration: <%= item.registration %>
+        <br>
+        Driver Name: <%= item.name %>
+        <br>
+        Drive Phone Number: <%= item.phone %>
+        <br>
+        Leave or not: <%= item.is_leave %>
+        <br>
+        Pick up Student: <%= item.student.name %>
+        <br><br><br>
+    </div>      
+<% end %>
+

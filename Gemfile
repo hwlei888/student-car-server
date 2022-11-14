@@ -54,3 +54,9 @@ end
 # gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'pry-rails' #for pry terminal
+
+#for CORS avoidance to enable AJAX requests
+gem 'rack-cors' 
+
+
+

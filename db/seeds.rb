@@ -146,7 +146,7 @@ s16 = Student.create!(
 
     name: 'Ryan Green',
     classroom: 'B',
-    phone: '',
+    phone: '0487669308',
     is_leave: false,
 
 )
@@ -155,7 +155,7 @@ s17 = Student.create!(
 
     name: 'Jacob Miller',
     classroom: 'B',
-    phone: '',
+    phone: '0443054768',
     is_leave: false,
 
 )
@@ -164,7 +164,7 @@ s18 = Student.create!(
 
     name: 'Gary Watson',
     classroom: 'B',
-    phone: '',
+    phone: '0436618741',
     is_leave: false,
 
 )
@@ -173,7 +173,7 @@ s19 = Student.create!(
 
     name: 'Stephanie Russell',
     classroom: 'B',
-    phone: '',
+    phone: '0456813789',
     is_leave: false,
 
 )
@@ -182,7 +182,7 @@ s20 = Student.create!(
 
     name: 'Shirley Cox',
     classroom: 'B',
-    phone: '',
+    phone: '0473090218',
     is_leave: false,
 
 )
@@ -191,7 +191,7 @@ s21 = Student.create!(
 
     name: 'Anna Carter',
     classroom: 'B',
-    phone: '',
+    phone: '0499106329',
     is_leave: false,
 
 )
@@ -200,7 +200,7 @@ s22 = Student.create!(
 
     name: 'Brenda Chapman',
     classroom: 'B',
-    phone: '',
+    phone: '0424336060',
     is_leave: false,
 
 )
@@ -209,7 +209,7 @@ s23 = Student.create!(
 
     name: 'Eric Ellis',
     classroom: 'B',
-    phone: '',
+    phone: '0483802283',
     is_leave: false,
 
 )
@@ -218,7 +218,7 @@ s24 = Student.create!(
 
     name: 'Jonathan Harvey',
     classroom: 'B',
-    phone: '',
+    phone: '0499673594',
     is_leave: false,
 
 )
@@ -227,7 +227,7 @@ s25 = Student.create!(
 
     name: 'Emma Henderson',
     classroom: 'B',
-    phone: '',
+    phone: '0473246850',
     is_leave: false,
 
 )
@@ -427,95 +427,141 @@ c20 = Car.create!(
 
 c21 = Car.create!(
 
-    registration: '',
+    registration: 'YIX-851',
     name: 'Justin Marshall',
-    phone: '',
+    phone: '0439008424',
     is_leave: false,
 
 )
 
 c22 = Car.create!(
 
-    registration: '',
+    registration: 'YCK-558',
     name: 'Scott Singh',
-    phone: '',
+    phone: '0451595337',
     is_leave: false,
 
 )
 
 c23 = Car.create!(
 
-    registration: '',
+    registration: 'IXU-612',
     name: 'Nicole Richardson',
-    phone: '',
+    phone: '0425992224',
     is_leave: false,
 
 )
 
 c24 = Car.create!(
 
-    registration: '',
+    registration: 'ODI-405',
     name: 'Benjamin Walsh',
-    phone: '',
+    phone: '0439229512',
     is_leave: false,
 
 )
 
 c25 = Car.create!(
 
-    registration: '',
+    registration: 'PIX-570',
     name: 'Samuel Thomson',
-    phone: '',
+    phone: '0491002925',
     is_leave: false,
 
 )
 
 c26 = Car.create!(
 
-    registration: '',
+    registration: 'SMK-659',
     name: 'Katherine Cameron',
-    phone: '',
+    phone: '0492349102',
     is_leave: false,
 
 )
 
 c27 = Car.create!(
 
-    registration: '',
+    registration: 'SXH-798',
     name: 'Alexander Stevens',
-    phone: '',
+    phone: '0479370822',
     is_leave: false,
 
 )
 
 c28 = Car.create!(
 
-    registration: '',
+    registration: 'FLS-504',
     name: 'Frank',
-    phone: '',
+    phone: '0475242101',
     is_leave: false,
 
 )
 
 c29 = Car.create!(
 
-    registration: '',
+    registration: 'VAK-362',
     name: 'Debra Barnes',
-    phone: '',
+    phone: '0482490464',
     is_leave: false,
 
 )
 
 c30 = Car.create!(
 
-    registration: '',
+    registration: 'NLS-179',
     name: 'Julie Webb',
-    phone: '',
+    phone: '0488133338',
     is_leave: false,
 
 )
 
 puts("Created #{Car.count} cars")
+
+s1.cars << [c1, c2]
+s2.cars << c3
+s3.cars << c4
+s4.cars << c5
+s5.cars << c6
+s6.cars << c7
+s7.cars << c8
+s8.cars << [c9, c10, c11]
+s9.cars << c12
+s10.cars << c13
+s11.cars << c14
+s12.cars << c15
+s13.cars << c16
+s14.cars << c17
+s15.cars << c18
+s16.cars << [c19, c20]
+s17.cars << c21
+s18.cars << c22
+s19.cars << c23
+s20.cars << c24
+s21.cars << c25
+s22.cars << [c26, c27]
+s23.cars << c28
+s24.cars << c29
+s25.cars << c30
+
+
+puts "student -< cars one to many associations:"
+puts "• student #{Student.first.name} has cars: #{Student.first.cars.pluck(:registration).join(', ')}"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
  

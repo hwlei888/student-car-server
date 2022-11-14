@@ -1,0 +1,16 @@
+<h1>All Students</h1>
+
+<% @students.each do |item| %>
+    <div>
+        Student Name: <%= item.name %>
+        <br>
+        Class: <%= item.classroom %>
+        <br>
+        Phone Number: <%= item.phone %>
+        <br>
+        Leave or not: <%= item.is_leave %>
+        <br><br><br>
+    </div>      
+<% end %>
+
+
