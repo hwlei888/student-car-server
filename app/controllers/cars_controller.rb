@@ -32,9 +32,9 @@ class CarsController < ApplicationController
 
   def search
     keyword = params[:keyword]
-    results_registration = Car.where("registration ILIKE ?", "%#{keyword}%")
+    results_registration = Car.where("registration LIKE ?", "%#{keyword}%")
 
-    render json: results_registration
+    render json: results_registration, include:[:student]
   end
 
 
