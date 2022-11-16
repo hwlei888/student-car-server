@@ -6,7 +6,7 @@ class StudentsController < ApplicationController
   end
 
   def index
-    @students = Student.all
+    @students = Student.all.order("name ASC")
 
     respond_to do |format|
       format.html

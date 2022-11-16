@@ -6,11 +6,14 @@ class CarsController < ApplicationController
   end
 
   def index
-    @cars = Car.all
+    @cars = Car.all.order("registration ASC")
 
     respond_to do |format|
       format.html
-      format.json{render json: @cars, include:[:student]}
+      format.json{
+        render json: 
+        @cars, include:
+        [:student => {:include => :cars}]}
     end
     
   end #index
@@ -33,8 +36,14 @@ class CarsController < ApplicationController
   def search
     keyword = params[:keyword]
     results_registration = Car.where("registration LIKE ?", "%#{keyword}%")
+    results_student = Student.where("name LIKE ?", "%#{keyword}%")
 
-    render json: results_registration, include:[:student]
+    # render json: (results_registration, include:[:student]) + results_student
+    # render json: results_registration + results_student
+    render json: {
+      car: results_registration.as_json(include:[:student]),
+      student: results_student
+    } 
   end
 
 
