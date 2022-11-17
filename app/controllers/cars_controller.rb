@@ -41,8 +41,8 @@ class CarsController < ApplicationController
     # render json: (results_registration, include:[:student]) + results_student
     # render json: results_registration + results_student
     render json: {
-      car: results_registration.as_json(include:[:student]),
-      student: results_student
+      car: results_registration.as_json(include:[:student => {:include => :cars}]),
+      student: results_student.as_json(include:[:cars])
     } 
   end
 
