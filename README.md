@@ -1,25 +1,43 @@
-# README
+# Welcome to Student Pick Up App!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### A Student Pick Up platform using Reat Hooks and PostgreSQL 
 
-Things you may want to cover:
+#### Find the main README [here](https://github.com/hwlei888/student-car-frontend) and Visit the site on [HEROKU HERE](https://student-car-app.herokuapp.com)
 
-* Ruby version
+## Overview:
 
-* System dependencies
+- Student Pick Up App is a web application that can help students leave the classroom at the time school end time, by let them know that their pick-up car is next in the carpool lane.
 
-* Configuration
+- Users are able to search the car registration number or student name to find the associated child, and associated student name and brief inforamtion will show in the related class box.
 
-* Database creation
+- Users can also click the car registration number on the left and student name on the right to find the desired student.
 
-* Database initialization
+- Once the name is shown the user should be able to mark that student has left the class.
 
-* How to run the test suite
+- After pressing Leave Button, a proper message will be shown to indicate that the child has already left.
 
-* Services (job queues, cache servers, search engines, etc.)
+- User can also press 'Still here' Button to cancel Leave status if some issues happen and student comes back.
 
-* Deployment instructions
+- For each class, a counter should be shown how many students have left and how many are left in the class.
 
-* ...
-# student-car-server
+- A student can be associated with multiple vehicles.
+
+It is a full-stack web project that uses axios HTTP requests.
+
+## Tech Stack:
+
+Front-end: React.js, Hooks, Redux, Axios, CSS, Bootstrap
+
+Back-End: Ruby on Rails, PostgreSQL, ActiveRecord
+
+
+## TODO Lists:
+
+- Build out admin panel on the back end
+- Build login sign up system
+
+
+
+
+
+
